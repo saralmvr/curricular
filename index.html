@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curricular - Gerador de Currículo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <aside class="formulario">
+        <div class="header-form">
+            <h2>Dados do Currículo</h2>
+        </div>
+        <section class="grupo">
+            <h3>Informações Pessoais</h3>
+            <input
+                type="text"
+                id="nome"
+                placeholder="Nome completo">
+            <input
+                type="email"
+                id="email"
+                placeholder="E-mail">
+            <input
+                type="text"
+                id="telefone"
+                placeholder="Telefone">
+            <input
+                type="text"
+                id="cidade"
+                placeholder="Cidade">
+            <input
+                type="text"
+                id="linkedin"
+                placeholder="LinkedIn">
+            <input
+                type="text"
+                id="github"
+                placeholder="GitHub">
+        </section>
+        <section class="grupo">
+            <h3>Objetivo Profissional</h3>
+            <textarea
+                id="objetivo"
+                placeholder="Descreva seu objetivo profissional"></textarea>
+        </section>
+        <section class="grupo">
+            <div class="titulo-com-botao">
+                <h3>Formação Acadêmica</h3>
+                <button
+                    type="button"
+                    class="btn-add"
+                    id="addFormacao">
+                    + Adicionar
+                </button>
+            </div>
+            <div id="formacoesContainer"></div>
+        </section>
+        <section class="grupo">
+            <div class="titulo-com-botao">
+                <h3>Experiência Profissional</h3>
+                <button
+                    type="button"
+                    class="btn-add"
+                    id="addExperiencia">
+                    + Adicionar
+                </button>
+            </div>
+            <div id="experienciasContainer"></div>
+        </section>
+        <section class="grupo">
+            <div class="titulo-com-botao">
+                <h3>Cursos e Certificações</h3>
+                <button
+                    type="button"
+                    class="btn-add"
+                    id="addCurso">
+                    + Adicionar
+                </button>
+            </div>
+            <div id="cursosContainer"></div>
+        </section>
+        <section class="grupo">
+            <h3>Habilidades</h3>
+            <textarea
+                id="habilidades"
+                placeholder="Ex: JavaScript, HTML, CSS, Python, Trabalho em equipe"></textarea>
+        </section>
+        <section class="grupo">
+            <h3>Configurações</h3>
+            <select id="tema">
+                <option value="classico">Clássico</option>
+                <option value="moderno">Moderno</option>
+                <option value="minimalista">Minimalista</option>
+            </select>
+            <div class="acoes">
+                <button
+                    type="button"
+                    id="baixarPdf">
+                    Baixar PDF
+                </button>
+                <button
+                    type="button"
+                    id="limparDados">
+                    Limpar Dados
+                </button>
+            </div>
+        </section>
+    </aside>
+    <main
+        class="curriculo classico"
+        id="curriculo">
+        <header class="curriculo-header">
+            <h1 id="cvNome">
+                Seu Nome
+            </h1>
+            <div class="contato">
+                <p id="cvEmail"></p>
+                <p id="cvTelefone"></p>
+                <p id="cvCidade"></p>
+                <p id="cvLinkedin"></p>
+                <p id="cvGithub"></p>
+            </div>
+        </header>
+        <section class="secao-cv">
+            <h2>Objetivo</h2>
+            <p id="cvObjetivo"></p>
+        </section>
+        <section class="secao-cv">
+            <h2>Formação Acadêmica</h2>
+            <div id="cvFormacoes"></div>
+        </section>
+        <section class="secao-cv">
+            <h2>Experiência Profissional</h2>
+            <div id="cvExperiencias"></div>
+        </section>
+        <section class="secao-cv">
+            <h2>Cursos e Certificações</h2>
+            <div id="cvCursos"></div>
+        </section>
+        <section class="secao-cv">
+            <h2>Habilidades</h2>
+            <p id="cvHabilidades"></p>
+        </section>
+    </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
